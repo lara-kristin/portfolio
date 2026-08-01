@@ -1,1 +1,0 @@
-Add your resume as resume.pdf and other documents here.
