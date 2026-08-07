@@ -13,7 +13,9 @@
 <body>
 
     <!-- Navigation -->
+
     <header class="site-header">
+
         <nav class="navigation" aria-label="Main navigation">
 
             <a class="site-name" href="../index.html">
@@ -21,19 +23,27 @@
             </a>
 
             <ul class="navigation-links">
+
                 <li>
                     <a href="../about.html">About Me</a>
                 </li>
+
                 <li>
-                    <a href="../intelligent-agents.html">Intelligent Agents</a>
+                    <a href="../intelligent-agents.html" aria-current="page">
+                        Intelligent Agents
+                    </a>
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
     <!-- Hero -->
+
     <section class="hero">
+
         <div class="hero-inner">
 
             <p class="hero-label">
@@ -47,78 +57,748 @@
             </p>
 
         </div>
+
     </section>
 
     <!-- Main Content -->
+
     <main>
 
         <div class="content-wrapper">
 
-            <section class="content-section">
+            <!-- Discussion Navigation -->
+
+            <section class="content-section" id="discussion-navigation">
+
+                <h2>Jump to Discussion</h2>
+
+                <nav class="discussion-nav" aria-label="Discussion navigation">
+
+                    <a class="discussion-button" href="#discussion1">
+                        Agent-Based Systems
+                    </a>
+
+                    <a class="discussion-button" href="#discussion2">
+                        Agent Communication Languages
+                    </a>
+
+                    <a class="discussion-button" href="#discussion3">
+                        Deep Learning
+                    </a>
+
+                </nav>
+
+            </section>
+
+            <!-- Discussion 1 -->
+
+            <section class="content-section" id="discussion1">
 
                 <h2>Collaborative Discussion 1: Agent-Based Systems</h2>
 
                 <div class="discussion-block">
 
-                    <h3>Initial Post</h3>
-                    <p class="placeholder">...</p>
+                    <!-- Discussion Task -->
 
-                    <h3>Summary</h3>
-                    <p class="placeholder">...</p>
+                    <details>
 
-                    <h3>Reflection</h3>
-                    <p class="placeholder">...</p>
+                        <summary>Discussion Task</summary>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                        <div class="discussion-post">
+
+                            <p>
+                                Discuss what has led to the rise of agent-based systems and
+                                the benefits that this approach can offer to organisations.
+                                Discussion should include at least three references.
+                            </p>
+
+                            <p class="post-subheading">
+                                <strong>Additional Task</strong>
+                            </p>
+
+                            <p>
+                                You should research how LLM-powered agents are designed for
+                                academic research or information gathering. Find at least one
+                                academic paper, technical article, or credible online source
+                                that explains agent architectures, task decomposition, or
+                                planning strategies.
+                            </p>
+
+                            <p>
+                                In your discussion post, summarise the key ideas from your
+                                research, explain how these ideas could support your own agent
+                                design, and describe one design decision you plan to make for
+                                your project.
+                            </p>
+
+                            <p>
+                                You should also reply to at least two classmates, comparing
+                                approaches and offering constructive suggestions.
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                    <!-- Initial Post -->
+
+                    <details>
+
+                        <summary>Initial Post</summary>
+
+                        <div class="discussion-post">
+
+                            <p>
+                                The growing use of agent-based systems reflects both the increasing
+                                complexity of organisational processes and continued advances in
+                                artificial intelligence. Many modern tasks are distributed,
+                                constantly changing and difficult to manage through a single
+                                centralised system. Multi-agent systems respond to this challenge by
+                                dividing work among autonomous, specialised agents that can
+                                interpret their environment, make decisions and coordinate their
+                                actions. More recently, large language models have accelerated this
+                                development by improving agents’ ability to communicate in natural
+                                language, reason, plan, retain information and access external
+                                knowledge (Li <em>et al.</em>, 2024).
+                            </p>
+
+                            <p>
+                                Agent-based computing also builds on established AI research. For
+                                example, the Belief-Desire-Intention architecture represents what
+                                an agent knows, what it aims to achieve and the plans it chooses to
+                                follow. This allows agents to act purposefully in changing
+                                environments. However, Archibald <em>et al.</em> (2024) show that
+                                performance is strongly influenced by how agents prioritise
+                                competing intentions, indicating that autonomy alone does not
+                                guarantee effective decision-making.
+                            </p>
+
+                            <p>
+                                For organisations, agent-based systems can support the division of
+                                tasks, parallel problem-solving and decentralised decision-making.
+                                Organisational models can also define roles and communication
+                                protocols to structure how agents interact. However, these
+                                advantages can come with trade-offs. Bouslimi (2024) found that an
+                                organisation-based multi-agent system remained highly efficient as
+                                task complexity increased, although specialised roles and rigid
+                                communication protocols limited its flexibility and robustness.
+                                Overall, agent-based systems can provide considerable value for
+                                organisations managing complex and distributed work, but their
+                                effectiveness depends on strong coordination, appropriate
+                                validation and resilient system design.
+                            </p>
+
+                            <p class="post-subheading">
+                                <strong>Additional Task</strong>
+                            </p>
+
+                            <p>
+                                Research into STORM and PaSa suggests that LLM-powered research
+                                systems should separate planning, retrieval and evaluation rather
+                                than respond immediately using only the language model’s existing
+                                knowledge.
+                            </p>
+
+                            <p>
+                                STORM decomposes a broad topic into several research perspectives,
+                                generates follow-up questions, retrieves information from external
+                                sources and organises the collected evidence into an outline before
+                                producing a long-form response (Shao <em>et al.</em>, 2024). PaSa
+                                focuses specifically on academic paper search. It uses a Crawler to
+                                generate search queries, retrieve papers and follow citation links,
+                                while a Selector assesses whether each paper satisfies the user’s
+                                requirements (He <em>et al.</em>, 2025).
+                            </p>
+
+                            <p>
+                                Both systems demonstrate the value of task decomposition, iterative
+                                searching and evaluating retrieved information before it is used in
+                                the final research output. These principles could inform our
+                                group’s agent design by enabling the system to expand or redirect
+                                its search when the initial results are insufficient or irrelevant.
+                                One design option to consider is a single coordinating planning
+                                agent that converts the user’s goal into focused subquestions and
+                                manages separate stages for retrieval, relevance assessment,
+                                evidence extraction and synthesis. This architecture could help
+                                maintain alignment with the overall research goal while supporting
+                                a modular, transparent and traceable workflow.
+                            </p>
+
+                            <p class="post-subheading">
+                                <strong>References</strong>
+                            </p>
+
+                            <p class="reference-entry">
+                                Archibald, B. <em>et al.</em> (2024) ‘Quantitative modelling and
+                                analysis of BDI agents’, <em>Software and Systems Modeling</em>,
+                                23, pp. 343-367. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s10270-023-01121-5"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s10270-023-01121-5
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Bouslimi, I. (2024) ‘The scalability impact on organization-based
+                                multi-agent systems’, <em>28th International Conference on
+                                Knowledge-Based and Intelligent Information &amp; Engineering
+                                Systems (KES 2024)</em>, Seville, Spain, 11-13 September.
+                                Amsterdam: Elsevier B.V. Pp. 991-1000. Available at:
+                                <a
+                                    href="https://doi.org/10.1016/j.procs.2024.09.518"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1016/j.procs.2024.09.518
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                He, Y. <em>et al.</em> (2025) ‘PaSa: An LLM agent for
+                                comprehensive academic paper search’, <em>63rd Annual Meeting of
+                                the Association for Computational Linguistics</em>, Vienna,
+                                Austria, 27 July-1 August. Association for Computational
+                                Linguistics. Pp. 11663-11679. Available at:
+                                <a
+                                    href="https://doi.org/10.18653/v1/2025.acl-long.572"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.18653/v1/2025.acl-long.572
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Li, X. <em>et al.</em> (2024) ‘A survey on LLM-based multi-agent
+                                systems: workflow, infrastructure, and challenges’,
+                                <em>Vicinagearth</em>, 1, article 9. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s44336-024-00009-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s44336-024-00009-2
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Shao, Y. <em>et al.</em> (2024) ‘Assisting in writing
+                                Wikipedia-like articles from scratch with large language models’,
+                                <em>2024 Conference of the North American Chapter of the
+                                Association for Computational Linguistics: Human Language
+                                Technologies</em>, Mexico City, Mexico, 16-21 June. Association
+                                for Computational Linguistics. Pp. 6252-6278. Available at:
+                                <a
+                                    href="https://doi.org/10.18653/v1/2024.naacl-long.347"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.18653/v1/2024.naacl-long.347
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                    <!-- Summary of Discussion -->
+
+                    <details>
+
+                        <summary>Discussion Post</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
+
+                    <!-- Peer Contributions -->
+
+                    <details>
+
+                        <summary>Peer Contributions</summary>
+
+                        <!-- Response to Anne -->
+
+                        <div class="peer-response">
+
+                            <h4>Response to Anne</h4>
+
+                            <p>
+                                Hi Anne,
+                            </p>
+
+                            <p>
+                                Thank you for raising this point. Your distinction between error
+                                propagation and restriction neglect made me reconsider whether
+                                planning and revision should remain concentrated within a single
+                                agent. It also gives me a useful perspective to bring to my group
+                                when we discuss whether a single coordinating agent or a more
+                                distributed multi-agent architecture would be most appropriate.
+                            </p>
+
+                            <p>
+                                I would be open to a distributed architecture in which planning,
+                                retrieval and evaluation are handled by separate but interacting
+                                agents. Li <em>et al.</em> (2024) describe LLM-based multi-agent
+                                systems as involving specialised roles, inter-agent communication
+                                and the adjustment of plans through feedback and reflection. More
+                                specifically, Deng <em>et al.</em> (2025) propose an iterative
+                                framework containing a query planner, retrieval agent and relevance
+                                evaluator, demonstrating how these functions can remain distinct
+                                while exchanging information throughout the search process.
+                            </p>
+
+                            <p>
+                                Within such an architecture, the retrieval agent could flag limited
+                                search coverage or insufficient results, while the evaluation agent
+                                could identify poorly matched or low-relevance evidence. Both could
+                                recommend revised queries or subquestions rather than allowing the
+                                system to continue with an ineffective plan. I would therefore allow
+                                retrieval and evaluation agents to challenge the plan rather than
+                                keeping every revision exclusively with the planner.
+                            </p>
+
+                            <p>
+                                However, they should not be able to change the original research
+                                goal or remove stated constraints independently. The planner should
+                                maintain an explicit record of the user’s requirements, while
+                                significant revisions should return to the user for approval. This
+                                aligns with Borghoff, Bottoni and Pareschi (2025), whose multi-agent
+                                framework gives human participants responsibility for guiding
+                                overall objectives while LLMs and specialised agents perform
+                                coordinated supporting roles.
+                            </p>
+
+                            <p>
+                                Your point therefore highlights a useful middle ground: specialised
+                                agents can provide operational feedback and initiate replanning,
+                                while the planner and user retain oversight of changes that could
+                                affect the original research requirements.
+                            </p>
+
+                            <p class="peer-reference-heading">
+                                <strong>References</strong>
+                            </p>
+
+                            <p class="reference-entry">
+                                Borghoff, U. M., Bottoni, P. and Pareschi, R. (2025) ‘An
+                                organizational theory for multi-agent interactions integrating
+                                human agents, LLMs, and specialized AI’,
+                                <em>Discover Computing</em>, 28, article 138. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s10791-025-09667-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s10791-025-09667-2
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Deng, L. <em>et al.</em> (2025) ‘LLM-augmented multi-agent
+                                cooperative framework for medical case retrieval in cardiology’,
+                                <em>Journal of King Saud University Computer and Information
+                                Sciences</em>, 37, article 267. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s44443-025-00311-z"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s44443-025-00311-z
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Li, X. <em>et al.</em> (2024) ‘A survey on LLM-based
+                                multi-agent systems: workflow, infrastructure, and challenges’,
+                                <em>Vicinagearth</em>, 1, article 9. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s44336-024-00009-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s44336-024-00009-2
+                                </a>
+                            </p>
+
+                        </div>
+
+                        <!-- Response to Isaac -->
+
+                        <div class="peer-response">
+
+                            <h4>Response to Isaac</h4>
+
+                            <p>
+                                Hi Isaac,
+                            </p>
+
+                            <p>
+                                Your post provides a balanced overview of both the benefits and
+                                risks of agent-based systems. I particularly agree that greater
+                                autonomy does not necessarily produce greater value. However, I
+                                wonder whether adaptability and coordination provide a
+                                sufficiently clear basis for deciding when agent-based computing
+                                is appropriate.
+                            </p>
+
+                            <p>
+                                Recent evidence suggests that the value of multi-agent coordination
+                                is highly task-dependent. Kim <em>et al.</em> (2026) found
+                                substantial performance gains for multi-agent systems in structured
+                                financial reasoning, but considerable deterioration in sequential
+                                planning tasks. They argue that coordination can become
+                                counterproductive when its complexity exceeds that of the
+                                underlying task. Similarly, Mandal <em>et al.</em> (2025) found
+                                that a multi-agent framework outperformed a single-agent
+                                configuration in laboratory automation. However, the LLM agents
+                                still struggled with basic tasks, sometimes deviated from
+                                instructions, and both configurations remained sensitive to minor
+                                changes in prompting. Improved relative performance therefore does
+                                not necessarily establish sufficient reliability for organisational
+                                deployment.
+                            </p>
+
+                            <p>
+                                Tool use creates an additional challenge. Xu <em>et al.</em>
+                                (2025) explain that agents must determine whether a tool is needed,
+                                identify the appropriate tool and invoke it correctly across
+                                multiple steps. For simple tasks, errors in tool retrieval and
+                                parameter selection may even create more difficulty than completing
+                                the task directly.
+                            </p>
+
+                            <p>
+                                I would therefore argue that organisations should not adopt
+                                agent-based systems primarily because a process is dynamic or
+                                requires coordination. They should first benchmark multi-agent,
+                                single-agent and deterministic alternatives using task-specific
+                                measures such as accuracy, robustness, cost and recoverability.
+                                How should organisations determine when agentic flexibility
+                                genuinely outweighs the additional coordination and reliability
+                                risks?
+                            </p>
+
+                            <p class="peer-reference-heading">
+                                <strong>References</strong>
+                            </p>
+
+                            <p class="reference-entry">
+                                Kim, Y. <em>et al.</em> (2026) ‘Capable language models can
+                                outgrow the benefits of collaboration’,
+                                <em>Nature Machine Intelligence</em>, 8, pp. 1157-1172.
+                                Available at:
+                                <a
+                                    href="https://doi.org/10.1038/s42256-026-01268-y"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1038/s42256-026-01268-y
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Mandal, I. <em>et al.</em> (2025) ‘Evaluating large language
+                                model agents for automation of atomic force microscopy’,
+                                <em>Nature Communications</em>, 16, article 9104. Available at:
+                                <a
+                                    href="https://doi.org/10.1038/s41467-025-64105-7"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1038/s41467-025-64105-7
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Xu, W. <em>et al.</em> (2025) ‘LLM-based agents for tool
+                                learning: A survey’, <em>Data Science and Engineering</em>,
+                                10, pp. 533-563. Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s41019-025-00296-9"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s41019-025-00296-9
+                                </a>
+                            </p>
+
+                        </div>
+
+                        <!-- Response to Connor -->
+
+                        <div class="peer-response">
+
+                            <h4>Response to Connor</h4>
+
+                            <p>
+                                Hi Connor,
+                            </p>
+
+                            <p>
+                                Your post picks up on how quickly AI agent systems have been taken
+                                up, and on how widely they are now being applied. The point about
+                                cross-industry deployment seems right to me, and the organisational
+                                potential is hard to dispute. What I keep circling back to is
+                                whether that same versatility makes limited human oversight a
+                                benefit, or simply a by-product of how these systems are built.
+                            </p>
+
+                            <p>
+                                Acharya, Kuppan and Divya (2025) describe agentic AI as capable of
+                                pursuing complex goals with minimal human intervention, but they
+                                also identify challenges surrounding goal alignment, resource
+                                constraints and safe integration. This suggests that increasing
+                                autonomy may create organisational value, but also introduces risks
+                                that need to be managed rather than simply reducing the need for
+                                human involvement.
+                            </p>
+
+                            <p>
+                                This becomes particularly important in higher-risk applications.
+                                Zhao <em>et al.</em> (2026), for example, identify considerable
+                                potential for AI agents across healthcare, including diagnosis,
+                                clinical decision-making and hospital operations. At the same time,
+                                they highlight persistent challenges involving hallucinations,
+                                limited interpretability and unclear accountability. The
+                                consequences of these limitations are likely to differ considerably
+                                depending on whether an agent is automating a routine administrative
+                                task or contributing to a clinical decision.
+                            </p>
+
+                            <p>
+                                Rather than treating autonomy and human oversight as opposites, Zhu
+                                <em>et al.</em> (2026) propose distinguishing between AI operative
+                                agency and human evaluative agency. Under this approach, agents can
+                                retain autonomy in performing tasks while humans remain responsible
+                                for evaluating, steering or overriding their outputs when necessary.
+                            </p>
+
+                            <p>
+                                I therefore wonder whether reduced human oversight should itself be
+                                viewed as an organisational benefit, or whether the appropriate
+                                level of autonomy should instead depend on the risk and consequences
+                                associated with a particular task.
+                            </p>
+
+                            <p class="peer-reference-heading">
+                                <strong>References</strong>
+                            </p>
+
+                            <p class="reference-entry">
+                                Acharya, D. B., Kuppan, K. and Divya, B. (2025) 'Agentic AI:
+                                autonomous intelligence for complex goals—a comprehensive survey',
+                                <em>IEEE Access</em>, 13, pp. 18912-18936. Available at:
+                                <a
+                                    href="https://doi.org/10.1109/ACCESS.2025.3532853"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1109/ACCESS.2025.3532853
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Zhao, L. <em>et al.</em> (2026) 'AI agent in healthcare:
+                                applications, evaluations, and future directions',
+                                <em>npj Artificial Intelligence</em>, 2, article 31.
+                                Available at:
+                                <a
+                                    href="https://doi.org/10.1038/s44387-026-00076-4"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1038/s44387-026-00076-4
+                                </a>
+                            </p>
+
+                            <p class="reference-entry">
+                                Zhu, L. <em>et al.</em> (2026) 'Designing meaningful human
+                                oversight in AI', <em>AI and Ethics</em>, 6, article 286.
+                                Available at:
+                                <a
+                                    href="https://doi.org/10.1007/s43681-026-01147-7"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    https://doi.org/10.1007/s43681-026-01147-7
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </details>
+
+                    <!-- Reflection -->
+
+                    <details>
+
+                        <summary>Reflection</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
 
                 </div>
 
+                <p>
+                    <a class="back-link" href="#discussion-navigation">
+                        ↑ Back to Discussion Navigation
+                    </a>
+                </p>
+
             </section>
 
-            <section class="content-section">
+            <!-- Discussion 2 -->
+
+            <section class="content-section" id="discussion2">
 
                 <h2>Collaborative Discussion 2: Agent Communication Languages</h2>
 
                 <div class="discussion-block">
 
-                    <h3>Initial Post</h3>
-                    <p class="placeholder">...</p>
+                    <details>
 
-                    <h3>Summary</h3>
-                    <p class="placeholder">...</p>
+                        <summary>Discussion Task</summary>
 
-                    <h3>Reflection</h3>
-                    <p class="placeholder">...</p>
+                        <p class="placeholder">...</p>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                    </details>
+
+                    <details>
+
+                        <summary>Initial Post</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Discussion Post</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Peer Contributions</summary>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to X</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to Y</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to Z</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Reflection</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
 
                 </div>
 
+                <p>
+                    <a class="back-link" href="#discussion-navigation">
+                        ↑ Back to Discussion Navigation
+                    </a>
+                </p>
+
             </section>
 
-            <section class="content-section">
+            <!-- Discussion 3 -->
+
+            <section class="content-section" id="discussion3">
 
                 <h2>Collaborative Discussion 3: Deep Learning</h2>
 
                 <div class="discussion-block">
 
-                    <h3>Initial Post</h3>
-                    <p class="placeholder">...</p>
+                    <details>
 
-                    <h3>Summary</h3>
-                    <p class="placeholder">...</p>
+                        <summary>Discussion Task</summary>
 
-                    <h3>Reflection</h3>
-                    <p class="placeholder">...</p>
+                        <p class="placeholder">...</p>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                    </details>
+
+                    <details>
+
+                        <summary>Initial Post</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Discussion Post</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Peer Contributions</summary>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to X</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to Y</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                        <div class="peer-response">
+
+                            <h4>Peer Response to Z</h4>
+
+                            <p class="placeholder">...</p>
+
+                        </div>
+
+                    </details>
+
+                    <details>
+
+                        <summary>Reflection</summary>
+
+                        <p class="placeholder">...</p>
+
+                    </details>
 
                 </div>
 
+                <p>
+                    <a class="back-link" href="#discussion-navigation">
+                        ↑ Back to Discussion Navigation
+                    </a>
+                </p>
+
             </section>
+
+            <!-- Back Link -->
 
             <p>
                 <a class="back-link" href="../intelligent-agents.html">
@@ -131,11 +811,15 @@
     </main>
 
     <!-- Footer -->
+
     <footer class="site-footer">
 
         <div class="footer-inner">
+
             <p>© 2026 Lara Koller</p>
+
             <p>MSc Artificial Intelligence · University of Essex</p>
+
         </div>
 
     </footer>
