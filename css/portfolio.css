@@ -1,10 +1,6 @@
-/* ==========================================
-   Variables
-========================================== */
-
 :root {
     --background: #f5f7fa;
-    --surface: #fff;
+    --surface: #ffffff;
     --surface-muted: #eef1f6;
     --text: #202736;
     --muted: #657083;
@@ -15,11 +11,6 @@
     --shadow: 0 14px 35px rgba(23, 43, 73, 0.09);
     --max-width: 1120px;
 }
-
-
-/* ==========================================
-   Base
-========================================== */
 
 * {
     box-sizing: border-box;
@@ -48,9 +39,7 @@ img {
 }
 
 
-/* ==========================================
-   Header and Navigation
-========================================== */
+/* Header and Navigation */
 
 .site-header {
     background: rgba(255, 255, 255, 0.98);
@@ -103,14 +92,12 @@ img {
 }
 
 
-/* ==========================================
-   Hero
-========================================== */
+/* Hero */
 
 .hero {
     padding: 88px 20px;
     background: var(--primary-dark);
-    color: #fff;
+    color: #ffffff;
 }
 
 .hero-inner,
@@ -143,9 +130,7 @@ img {
 }
 
 
-/* ==========================================
-   Main Layout
-========================================== */
+/* Main Layout */
 
 main {
     padding: 72px 20px 96px;
@@ -179,11 +164,6 @@ main {
     color: var(--muted);
 }
 
-
-/* ==========================================
-   Content Sections
-========================================== */
-
 .module-overview,
 .content-section {
     margin-bottom: 36px;
@@ -211,9 +191,7 @@ main {
 }
 
 
-/* ==========================================
-   Portfolio and Activity Cards
-========================================== */
+/* Portfolio Tiles */
 
 .tile-grid,
 .activity-grid {
@@ -279,9 +257,7 @@ main {
 }
 
 
-/* ==========================================
-   Buttons and Links
-========================================== */
+/* Buttons and Links */
 
 .tile-link,
 .entry-link,
@@ -308,13 +284,11 @@ main {
 .download-link:hover {
     background: var(--primary-dark);
     border-color: var(--primary-dark);
-    color: #fff;
+    color: #ffffff;
 }
 
 
-/* ==========================================
-   Upcoming Portfolio Sections
-========================================== */
+/* Upcoming Portfolio Sections */
 
 .portfolio-tile.is-upcoming {
     background: var(--surface-muted);
@@ -345,9 +319,7 @@ main {
 }
 
 
-/* ==========================================
-   About Me
-========================================== */
+/* About Page */
 
 .profile-layout {
     display: grid;
@@ -378,9 +350,7 @@ main {
 }
 
 
-/* ==========================================
-   Discussion and Case Study Blocks
-========================================== */
+/* Discussion Sections */
 
 .discussion-block,
 .case-study-block {
@@ -388,11 +358,6 @@ main {
     border-top: 1px solid var(--border);
     margin-top: 30px;
 }
-
-
-/* ==========================================
-   Collaborative Discussions
-========================================== */
 
 #discussion-navigation,
 #discussion1,
@@ -427,9 +392,12 @@ main {
 
 .discussion-button:hover {
     background: var(--primary-dark);
-    color: #fff;
+    color: #ffffff;
     border-color: var(--primary-dark);
 }
+
+
+/* Discussion Accordions */
 
 .discussion-block details {
     margin-top: 1rem;
@@ -469,9 +437,7 @@ main {
 }
 
 
-/* ==========================================
-   Discussion Post Content
-========================================== */
+/* Discussion Posts */
 
 .discussion-post {
     padding: 0 1rem 1rem;
@@ -496,9 +462,7 @@ main {
 }
 
 
-/* ==========================================
-   Peer Responses
-========================================== */
+/* Peer Responses */
 
 .peer-response {
     margin-top: 1.75rem;
@@ -544,9 +508,39 @@ main {
 }
 
 
-/* ==========================================
-   Professional Skills Matrix
-========================================== */
+/* Discussion Evidence Screenshots */
+
+.evidence-figure {
+    margin: 24px 0;
+}
+
+.evidence-link {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface);
+    cursor: zoom-in;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        border-color 160ms ease;
+}
+
+.evidence-link:hover {
+    transform: translateY(-2px);
+    border-color: #c8d3e3;
+    box-shadow: var(--shadow);
+}
+
+.evidence-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Professional Skills Matrix */
 
 .skills-matrix {
     display: grid;
@@ -593,9 +587,7 @@ main {
 }
 
 
-/* ==========================================
-   Personal Development Plan
-========================================== */
+/* Personal Development Plan Table */
 
 .pdp-table-wrapper {
     width: 100%;
@@ -633,9 +625,7 @@ main {
 }
 
 
-/* ==========================================
-   Footer
-========================================== */
+/* Footer */
 
 .site-footer {
     padding: 30px 20px;
@@ -655,9 +645,7 @@ main {
 }
 
 
-/* ==========================================
-   Responsive Design
-========================================== */
+/* Responsive Layout */
 
 @media (max-width: 850px) {
 
