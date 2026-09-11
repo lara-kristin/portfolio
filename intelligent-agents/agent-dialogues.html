@@ -30,7 +30,6 @@
                         Intelligent Agents
                     </a>
                 </li>
-                
             </ul>
 
         </nav>
@@ -58,35 +57,205 @@
 
         <div class="content-wrapper">
 
+            <!-- Discussion Task -->
             <section class="content-section">
 
-                <h2>Overview</h2>
+                <h2>Discussion Task</h2>
 
-                <p class="placeholder">...</p>
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/agent-dialogues/agent-dialogue-task.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/agent-dialogues/agent-dialogue-task.png"
+                            alt="Task instructions for the KQML and KIF agent dialogue activity">
+                    </a>
+                </figure>
 
             </section>
 
+            <!-- Visualisation -->
             <section class="content-section">
 
-                <h2>Evidence</h2>
+                <h2>Agent Dialogue Visualisation</h2>
 
-                <p class="placeholder">...</p>
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/agent-dialogues/agent-dialogue-kqml-kif.svg"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/agent-dialogues/agent-dialogue-kqml-kif.svg"
+                            alt="Sequence diagram visualising the KQML and KIF dialogue between Alice and Bob">
+                    </a>
+                </figure>
+
+                <p class="placeholder">
+                    Sequence diagram created using
+                    <a href="https://mermaid.live/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Mermaid Live
+                    </a>.
+                </p>
 
             </section>
 
+            <!-- Full Dialogue -->
+            <section class="content-section">
+
+                <h2>Full KQML/KIF Dialogue</h2>
+
+                <div class="discussion-block">
+
+                    <details>
+                        <summary>
+                            Message 1 · Stock Query
+                        </summary>
+
+                        <figure class="evidence-figure">
+                            <a class="evidence-link"
+                                href="../images/agent-dialogues/agent-dialogue-01-stock-query.png"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <img class="evidence-image"
+                                    src="../images/agent-dialogues/agent-dialogue-01-stock-query.png"
+                                    alt="Alice asks Bob about the available stock of a 50-inch television">
+                            </a>
+                        </figure>
+                    </details>
+
+                    <details>
+                        <summary>
+                            Message 2 · Stock Response
+                        </summary>
+
+                        <figure class="evidence-figure">
+                            <a class="evidence-link"
+                                href="../images/agent-dialogues/agent-dialogue-02-stock-response.png"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <img class="evidence-image"
+                                    src="../images/agent-dialogues/agent-dialogue-02-stock-response.png"
+                                    alt="Bob responds to Alice with the current television stock level">
+                            </a>
+                        </figure>
+                    </details>
+
+                    <details>
+                        <summary>
+                            Message 3 · HDMI Query
+                        </summary>
+
+                        <figure class="evidence-figure">
+                            <a class="evidence-link"
+                                href="../images/agent-dialogues/agent-dialogue-03-hdmi-query.png"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <img class="evidence-image"
+                                    src="../images/agent-dialogues/agent-dialogue-03-hdmi-query.png"
+                                    alt="Alice asks Bob how many HDMI slots the identified television has">
+                            </a>
+                        </figure>
+                    </details>
+
+                    <details>
+                        <summary>
+                            Message 4 · HDMI Response
+                        </summary>
+
+                        <figure class="evidence-figure">
+                            <a class="evidence-link"
+                                href="../images/agent-dialogues/agent-dialogue-04-hdmi-response.png"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <img class="evidence-image"
+                                    src="../images/agent-dialogues/agent-dialogue-04-hdmi-response.png"
+                                    alt="Bob informs Alice how many HDMI slots the identified television has">
+                            </a>
+                        </figure>
+                    </details>
+
+                </div>
+
+            </section>
+
+            <!-- Reflection -->
             <section class="content-section">
 
                 <h2>Reflection</h2>
 
-                <p class="placeholder">...</p>
+                <h3>WHAT</h3>
 
-            </section>
+                <p>
+                    Constructing the dialogue changed how I understood KQML. I initially treated
+                    performatives mainly as labels, but <em>ask-one</em> and <em>tell</em> encode
+                    communicative purpose, while KIF represents the knowledge being exchanged
+                    (Finin <em>et al.</em>, 1994; Genesereth and Fikes, 1992).
+                </p>
 
-            <section class="content-section">
+                <h3>SO WHAT</h3>
 
-                <h2>References</h2>
+                <p>
+                    The activity showed that structured messages do not guarantee shared meaning.
+                    Agents still need a common ontology, and semantics based on internal beliefs or
+                    intentions may be difficult to verify externally (Singh, 1998).
+                </p>
 
-                <p class="placeholder">...</p>
+                <h3>NOW WHAT</h3>
+
+                <p>
+                    In future iterations of our research-agent system, I would keep deterministic
+                    operations such as DOI validation and deduplication under orchestrator control.
+                    I would only introduce richer agent communication if greater autonomy required
+                    agents to negotiate or challenge decisions directly, and would then define
+                    shared message semantics explicitly across agent boundaries.
+                </p>
+
+                <h3>References</h3>
+
+                <p>
+                    Finin, T. <em>et al.</em> (1994) 'KQML as an agent communication language',
+                    <em>Proceedings of the Third International Conference on Information and
+                    Knowledge Management</em>, Gaithersburg, Maryland, 29 November-2 December
+                    1994. New York: Association for Computing Machinery. pp. 456-463.
+                    Available at:
+                    <a href="https://doi.org/10.1145/191246.191322"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1145/191246.191322
+                    </a>
+                </p>
+
+                <p>
+                    Genesereth, M. R. and Fikes, R. E. (1992)
+                    <em>Knowledge Interchange Format, Version 3.0 Reference Manual</em>.
+                    Logic Group Report Logic-92-1. Stanford, CA: Computer Science Department,
+                    Stanford University. Available at:
+                    <a href="http://logic.stanford.edu/publications/genesereth/kif.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        http://logic.stanford.edu/publications/genesereth/kif.pdf
+                    </a>
+                    (Accessed: 4 September 2026).
+                </p>
+
+                <p>
+                    Singh, M. P. (1998) 'Agent communication languages: rethinking the principles',
+                    <em>Computer</em>, 31(12), pp. 40-47. Available at:
+                    <a href="https://doi.org/10.1109/2.735849"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1109/2.735849
+                    </a>
+                </p>
 
             </section>
 
