@@ -30,7 +30,6 @@
                         Intelligent Agents
                     </a>
                 </li>
-
             </ul>
 
         </nav>
@@ -58,35 +57,139 @@
 
         <div class="content-wrapper">
 
+            <!-- Activity Task -->
             <section class="content-section">
 
-                <h2>Overview</h2>
+                <h2>Activity Task</h2>
 
-                <p class="placeholder">...</p>
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/parse-trees/creating-parse-trees-task.png"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/parse-trees/creating-parse-trees-task.png"
+                            alt="Task instructions for the creating parse trees activity">
+                    </a>
+                </figure>
 
             </section>
 
+            <!-- Parse Tree Visualisations -->
             <section class="content-section">
 
-                <h2>Evidence</h2>
+                <h2>Parse Tree Visualisations</h2>
 
-                <p class="placeholder">...</p>
+                <h3>The government raised interest rates.</h3>
+
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/parse-trees/parse-tree-government-interest-rates.svg"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/parse-trees/parse-tree-government-interest-rates.svg"
+                            alt="Parse tree for the sentence The government raised interest rates">
+                    </a>
+                </figure>
+
+                <h3>The internet gives everyone a voice.</h3>
+
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/parse-trees/parse-tree-internet-gives-voice.svg"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/parse-trees/parse-tree-internet-gives-voice.svg"
+                            alt="Parse tree for the sentence The internet gives everyone a voice">
+                    </a>
+                </figure>
+
+                <h3>
+                    The man saw the dog with the telescope:
+                    VP Attachment
+                </h3>
+
+                <p>
+                    In this interpretation, the man used the telescope to see the dog.
+                </p>
+
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/parse-trees/parse-tree-dog-telescope-vp-attachment.svg"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/parse-trees/parse-tree-dog-telescope-vp-attachment.svg"
+                            alt="Parse tree showing verb phrase attachment for The man saw the dog with the telescope">
+                    </a>
+                </figure>
+
+                <h3>
+                    The man saw the dog with the telescope:
+                    NP Attachment
+                </h3>
+
+                <p>
+                    In this interpretation, the dog had the telescope.
+                </p>
+
+                <figure class="evidence-figure">
+                    <a class="evidence-link"
+                        href="../images/parse-trees/parse-tree-dog-telescope-np-attachment.svg"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        <img class="evidence-image"
+                            src="../images/parse-trees/parse-tree-dog-telescope-np-attachment.svg"
+                            alt="Parse tree showing noun phrase attachment for The man saw the dog with the telescope">
+                    </a>
+                </figure>
+
+                <p class="placeholder">
+                    Parse tree diagrams created using
+                    <a href="https://mermaid.live/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Mermaid Live
+                    </a>.
+                </p>
 
             </section>
 
+            <!-- Reflection -->
             <section class="content-section">
 
                 <h2>Reflection</h2>
 
-                <p class="placeholder">...</p>
+                <h3>WHAT</h3>
 
-            </section>
+                <p>
+                    Drawing two valid trees for “The man saw the dog with the telescope”
+                    challenged my assumption that syntax alone determines intended meaning.
+                    One reading gives the man the telescope; the other, the dog.
+                </p>
 
-            <section class="content-section">
+                <h3>SO WHAT</h3>
 
-                <h2>References</h2>
+                <p>
+                    Both parses are grammatical, so syntax cannot resolve the ambiguity alone.
+                    Interpretation depends on world knowledge, while a statistical parser may
+                    favour patterns more common in its training data.
+                </p>
 
-                <p class="placeholder">...</p>
+                <h3>NOW WHAT</h3>
+
+                <p>
+                    For ambiguous constructions, I would surface competing interpretations
+                    for confirmation before they influence downstream decisions. I would judge
+                    success by whether the user’s intended meaning is preserved.
+                </p>
 
             </section>
 
