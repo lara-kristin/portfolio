@@ -14,6 +14,7 @@
 
     <!-- Navigation -->
     <header class="site-header">
+
         <nav class="navigation" aria-label="Main navigation">
 
             <a class="site-name" href="../index.html">
@@ -21,8 +22,11 @@
             </a>
 
             <ul class="navigation-links">
+
                 <li>
-                    <a href="../about.html">About Me</a>
+                    <a href="../about.html">
+                        About Me
+                    </a>
                 </li>
 
                 <li>
@@ -34,10 +38,12 @@
             </ul>
 
         </nav>
+
     </header>
 
     <!-- Hero -->
     <section class="hero">
+
         <div class="hero-inner">
 
             <p class="hero-label">
@@ -47,11 +53,12 @@
             <h1>Reflective Case Studies</h1>
 
             <p>
-                Three reflective case studies based on selected themes explored
-                throughout the module and informed by my practical work.
+                Three reflective case studies based on issues encountered during the
+                design and implementation of my research agent.
             </p>
 
         </div>
+
     </section>
 
     <!-- Main Content -->
@@ -59,54 +66,157 @@
 
         <div class="content-wrapper">
 
+            <!-- Case Study 1 -->
             <section class="content-section">
 
-                <h2>Reflective Case Study 1</h2>
+                <h2>Case Study 1: Bias from Unequal Metadata Availability</h2>
 
-                <div class="case-study-block">
+                <p>
+                    While testing my research agent, I found that Semantic Scholar did not provide
+                    abstracts consistently across retrieved papers. Because the Evaluation Agent relies on
+                    abstract text for relevance scoring, treating a paper without an abstract as weak
+                    would have penalised missing metadata rather than its content. I therefore excluded
+                    such papers from automated relevance scoring, while keeping them visible to the
+                    researcher and reporting the missing abstracts in the brief's limitations. This avoided
+                    one form of unequal treatment while accepting another: a paper without an abstract
+                    cannot enter the proposed evidence set, however relevant it might be.
+                </p>
 
-                    <h3>Theme</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    This showed me that bias can arise from the information surrounding an autonomous
+                    decision, not only from the model itself. Mehrabi et al. (2021) describe measurement
+                    bias as arising from how features are selected and measured. A related pattern
+                    appeared in verification: AI-focused searches returned many arXiv preprints, whereas
+                    a biology topic produced many Crossref-verifiable records. The same control therefore
+                    had different reach because of publishing conventions rather than paper quality.
+                </p>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    In future, I would test such controls across domains, distinguish unavailable from
+                    negative evidence, and provide a separate review route for unassessable records.
+                </p>
 
-                </div>
+                <h3>Reference</h3>
+
+                <p class="reference-entry">
+                    Mehrabi, N. et al. (2021) ‘A survey on bias and fairness in machine learning’,
+                    <em>ACM Computing Surveys</em>, 54(6), pp. 1–35. Available at:
+                    <a
+                        href="https://doi.org/10.1145/3457607"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1145/3457607
+                    </a>
+                </p>
 
             </section>
 
+            <!-- Case Study 2 -->
             <section class="content-section">
 
-                <h2>Reflective Case Study 2</h2>
+                <h2>Case Study 2: Bounded Autonomy and the Placement of Human Oversight</h2>
 
-                <div class="case-study-block">
+                <p>
+                    I designed my research agent with two human checkpoints to bound autonomy. The
+                    first allows unlimited revision before retrieval; the second permits one scope revision
+                    after evidence review because later correction repeats retrieval, validation and
+                    assessment. The system may also reformulate a query once when retrieval is
+                    insufficient, capped because this changes an approved plan without asking the
+                    researcher again.
+                </p>
 
-                    <h3>Theme</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    Zhu et al. (2026) distinguish AI operative agency from human evaluative agency,
+                    where humans judge, verify and steer AI outputs. I placed the second gate before
+                    synthesis so the researcher could decide what evidence should be used. However, the
+                    summaries are generated without further human approval. The system checks that
+                    each summary names an approved paper, but not that its claims follow from that
+                    paper's abstract, even though summaries can contain content unsupported by their
+                    source (Maynez et al., 2020). This showed me that I had bounded autonomy mainly
+                    around correction cost rather than error consequence.
+                </p>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    In future, I would retain the evidence checkpoint but add a post-synthesis faithfulness
+                    check, placing safeguards according to risk as well as workflow cost.
+                </p>
 
-                </div>
+                <h3>References</h3>
+
+                <p class="reference-entry">
+                    Maynez, J. et al. (2020) 'On faithfulness and factuality in abstractive summarization',
+                    <em>Proceedings of the 58th Annual Meeting of the Association for Computational
+                    Linguistics</em>, Online. Association for Computational Linguistics, pp. 1906-1919.
+                    Available at:
+                    <a
+                        href="https://doi.org/10.18653/v1/2020.acl-main.173"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.18653/v1/2020.acl-main.173
+                    </a>
+                </p>
+
+                <p class="reference-entry">
+                    Zhu, L. et al. (2026) 'Designing meaningful human oversight in AI',
+                    <em>AI and Ethics</em>, 6, article 286. Available at:
+                    <a
+                        href="https://doi.org/10.1007/s43681-026-01147-7"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1007/s43681-026-01147-7
+                    </a>
+                </p>
 
             </section>
 
+            <!-- Case Study 3 -->
             <section class="content-section">
 
-                <h2>Reflective Case Study 3</h2>
+                <h2>Case Study 3: The Limits of Explainable Decisions</h2>
 
-                <div class="case-study-block">
+                <p>
+                    I designed my research agent to make relevance decisions inspectable. Each selected
+                    paper shows its relevance score, verification status and addressed sub-questions,
+                    while the JSON retains all assessments, including rejected papers and the model's
+                    stated reason for each score.
+                </p>
 
-                    <h3>Theme</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    I initially treated this as explainability. However, these fields do not have equal
+                    evidential status. Crossref verification is independently determined, whereas
+                    relevance scores, sub-question attribution and reasons depend on model judgement.
+                    The reason is generated alongside the score, so it is a model-produced justification
+                    rather than a record of how the score was reached. Parcalabescu and Frank (2024)
+                    argue that plausible natural-language explanations may still be unfaithful to the
+                    reasoning behind a prediction. I also found that scores clustered on round values; in
+                    one run, three pairings scored 1.00 and two scored 0.60, suggesting coarse bands
+                    rather than precise measurements. My system can therefore show what it decided and
+                    what it says about why, but not how the decision was produced.
+                </p>
 
-                    <h3>References</h3>
-                    <p class="placeholder">...</p>
+                <p>
+                    In future, I would separate traceability from explanation and ground relevance
+                    explanations in observable evidence, such as supporting abstract passages.
+                </p>
 
-                </div>
+                <h3>References</h3>
+
+                <p class="reference-entry">
+                    Parcalabescu, L. and Frank, A. (2024) 'On measuring faithfulness or self-consistency of
+                    natural language explanations', <em>Proceedings of the 62nd Annual Meeting of the
+                    Association for Computational Linguistics (Volume 1: Long Papers)</em>. Bangkok,
+                    Thailand. Association for Computational Linguistics, pp. 6048-6089. Available at:
+                    <a
+                        href="https://doi.org/10.18653/v1/2024.acl-long.329"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.18653/v1/2024.acl-long.329
+                    </a>
+                </p>
 
             </section>
 
+            <!-- Back Link -->
             <p>
                 <a class="back-link" href="../intelligent-agents.html">
                     ← Back to Intelligent Agents
@@ -121,8 +231,11 @@
     <footer class="site-footer">
 
         <div class="footer-inner">
+
             <p>© 2026 Lara Koller</p>
+
             <p>MSc Artificial Intelligence · University of Essex</p>
+
         </div>
 
     </footer>
