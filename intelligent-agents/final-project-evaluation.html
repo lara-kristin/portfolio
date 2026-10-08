@@ -130,6 +130,47 @@
 
             </section>
 
+            <!-- Design Phase Reflection -->
+            <section class="content-section">
+
+                <h2>Design Phase Reflection</h2>
+
+                <p class="post-subheading">
+                    <strong>WHAT</strong>
+                </p>
+
+                <p>
+                    During the group design phase, I wrote the design decisions section and
+                    produced the sequence and activity diagrams. While reviewing a teammate’s
+                    class diagram, I noticed that human-review functions sat on the
+                    Orchestrator, but the researcher was absent from the static model despite
+                    appearing in the dynamic workflow.
+                </p>
+
+                <p class="post-subheading">
+                    <strong>SO WHAT</strong>
+                </p>
+
+                <p>
+                    This exposed a weakness in the design itself: human oversight was central
+                    to our architecture, yet it was not represented consistently across views.
+                    Adding a boundary class improved that consistency, but the design was still
+                    unimplemented, so claims about bounded autonomy and reliable oversight
+                    remained assumptions rather than demonstrated behaviour.
+                </p>
+
+                <p class="post-subheading">
+                    <strong>NOW WHAT</strong>
+                </p>
+
+                <p>
+                    In future, I will treat cross-diagram consistency as a design criterion and
+                    distinguish clearly between controls that are proposed and controls that
+                    have been tested.
+                </p>
+
+            </section>
+
             <!-- Design Revision Evidence -->
             <section class="content-section">
 
@@ -177,47 +218,6 @@
 
             </section>
 
-            <!-- Design Phase Reflection -->
-            <section class="content-section">
-
-                <h2>Design Phase Reflection</h2>
-
-                <p class="post-subheading">
-                    <strong>WHAT</strong>
-                </p>
-
-                <p>
-                    During the group design phase, I wrote the design decisions section and
-                    produced the sequence and activity diagrams. While reviewing a teammate’s
-                    class diagram, I noticed that human-review functions sat on the
-                    Orchestrator, but the researcher was absent from the static model despite
-                    appearing in the dynamic workflow.
-                </p>
-
-                <p class="post-subheading">
-                    <strong>SO WHAT</strong>
-                </p>
-
-                <p>
-                    This exposed a weakness in the design itself: human oversight was central
-                    to our architecture, yet it was not represented consistently across views.
-                    Adding a boundary class improved that consistency, but the design was still
-                    unimplemented, so claims about bounded autonomy and reliable oversight
-                    remained assumptions rather than demonstrated behaviour.
-                </p>
-
-                <p class="post-subheading">
-                    <strong>NOW WHAT</strong>
-                </p>
-
-                <p>
-                    In future, I will treat cross-diagram consistency as a design criterion and
-                    distinguish clearly between controls that are proposed and controls that
-                    have been tested.
-                </p>
-
-            </section>
-
             <!-- Implemented Solution -->
             <section class="content-section">
 
@@ -258,7 +258,6 @@
                     underlying problem obvious.
                 </p>
 
-                <!-- Implementation Issues Table -->
                 <div class="pdp-table-wrapper">
 
                     <table class="pdp-table">
