@@ -167,28 +167,15 @@
 
                 <h2>Reflection</h2>
 
-                <h3>WHAT</h3>
-
                 <p>
                     Drawing two valid trees for “The man saw the dog with the telescope”
                     challenged my assumption that syntax alone determines intended meaning.
-                    One reading gives the man the telescope; the other, the dog.
-                </p>
-
-                <h3>SO WHAT</h3>
-
-                <p>
-                    Both parses are grammatical, so syntax cannot resolve the ambiguity alone.
-                    Interpretation depends on world knowledge, while a statistical parser may
-                    favour patterns more common in its training data.
-                </p>
-
-                <h3>NOW WHAT</h3>
-
-                <p>
-                    For ambiguous constructions, I would surface competing interpretations
-                    for confirmation before they influence downstream decisions. I would judge
-                    success by whether the user’s intended meaning is preserved.
+                    Both parses are grammatical, so resolving the ambiguity requires contextual
+                    or world knowledge rather than syntax alone. This showed me why statistical
+                    parsers may still favour the wrong interpretation. In future systems, I
+                    would surface competing interpretations for confirmation before they affect
+                    downstream decisions, with success measured by preserving the user’s
+                    intended meaning.
                 </p>
 
             </section>

@@ -92,19 +92,6 @@
 
             </section>
 
-            <!-- Supporting Evidence Note -->
-
-            <section class="content-section">
-
-                <h2>Supporting Evidence</h2>
-
-                <p>
-                    Original discussion contributions are presented as screenshots.
-                    Click any screenshot to open the full-size version in a new tab.
-                </p>
-
-            </section>
-
             <!-- Discussion 1 -->
 
             <section class="content-section" id="discussion1">
@@ -309,38 +296,16 @@
 
                         <div class="discussion-post">
 
-                            <p class="post-subheading">
-                                <strong>WHAT</strong>
-                            </p>
-
                             <p>
-                                I began the discussion viewing autonomy and specialisation as strengths
-                                of agent-based systems. Anne’s point about neglected user constraints,
-                                and Lana’s concern that fixed roles create bottlenecks, showed me that
-                                autonomy can fail when responsibilities are rigid or poorly bounded.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>SO WHAT</strong>
-                            </p>
-
-                            <p>
-                                I realised that robustness depends less on maximising autonomy than on
-                                controlling handoffs and preserving constraints. If planning drops a
-                                requirement, later evaluation may never detect it. Agents therefore need
-                                enough autonomy to challenge poor plans without changing the user’s
-                                underlying goals.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>NOW WHAT</strong>
-                            </p>
-
-                            <p>
-                                In future designs, I would record user constraints explicitly, expose
-                                subquestions for approval before retrieval, and let agents request
-                                replanning within defined limits. I would judge success by whether the
-                                system detects weak plans early.
+                                I initially viewed autonomy and specialisation as strengths of
+                                agent-based systems. Anne’s point about neglected user constraints
+                                and Lana’s concern about rigid roles showed me that autonomy can fail
+                                when responsibilities are poorly bounded. This changed my
+                                understanding of robustness: preserving constraints and controlling
+                                handoffs matters because a requirement lost during planning may never
+                                be recovered downstream. In future, I would record user constraints
+                                explicitly, approve subquestions before retrieval and allow bounded
+                                replanning when weaknesses are detected.
                             </p>
 
                         </div>
@@ -543,40 +508,16 @@
 
                         <div class="discussion-post">
 
-                            <p class="post-subheading">
-                                <strong>WHAT</strong>
-                            </p>
-
                             <p>
-                                I argued ACLs add meaning beyond method calls and support looser
-                                coupling. Anne showed I had overstated KQML’s performative limitation:
-                                communities can add performatives, so the deeper problem is consistent
-                                interpretation. Dragos shifted focus to whether receivers have genuine
-                                discretion.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>SO WHAT</strong>
-                            </p>
-
-                            <p>
-                                Richer communication is not automatically better. If agents cannot
-                                reject, reinterpret or negotiate, ACL semantics add complexity without
-                                useful communicative autonomy. Confidence scores improve traceability
-                                but do not verify beliefs; accountability requires obligations
-                                assessable later.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>NOW WHAT</strong>
-                            </p>
-
-                            <p>
-                                I would keep deterministic exchanges as typed calls. For discretionary
-                                interactions, I would record the commitments created so later behaviour
-                                can be checked against them. My success criterion would be whether
-                                discrepancies between commitments and subsequent agent behaviour are
-                                detected.
+                                I argued that ACLs add meaning beyond method calls. Anne showed I
+                                had overstated KQML’s performative limitation, while Dragos shifted
+                                my attention to whether receivers have genuine discretion. This
+                                changed my view of richer communication: it is only useful when
+                                agents can reject, reinterpret or negotiate. Otherwise, ACL
+                                semantics add complexity without meaningful communicative autonomy.
+                                In future, I would keep deterministic exchanges as typed calls, but
+                                record commitments where agents exercise discretion so later
+                                behaviour can be checked against them.
                             </p>
 
                         </div>
@@ -779,38 +720,17 @@
 
                         <div class="discussion-post">
 
-                            <p class="post-subheading">
-                                <strong>WHAT</strong>
-                            </p>
-
                             <p>
-                                I explored ethical issues in generative AI, focusing on bias and how
-                                fairness should be addressed throughout development. Peer responses
-                                challenged how I interpreted evidence of bias and which benchmarks
-                                should define fairness.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>SO WHAT</strong>
-                            </p>
-
-                            <p>
-                                I realised my initial post overstated the evidence, treating disparities
-                                against benchmarks as amplification of training-data bias. Even when bias
-                                can be measured, deciding what a fair outcome should look like is
-                                value-dependent and context-specific. Seemingly technical choices, such as
-                                thresholds or the handling of missing abstracts, can also embed value
-                                judgements.
-                            </p>
-
-                            <p class="post-subheading">
-                                <strong>NOW WHAT</strong>
-                            </p>
-
-                            <p>
-                                I will make evaluation criteria explicit in future AI projects, starting
-                                with documenting and justifying my research agent’s 0.6 relevance
-                                threshold, and consider whose values those choices reflect.
+                                I explored bias in generative AI, but peer responses challenged
+                                both my interpretation of the evidence and the benchmarks used to
+                                define fairness. The discussion made me recognise that I had
+                                overstated the evidence by treating disparities against benchmarks
+                                as proof of amplified training-data bias. It also showed me that
+                                fairness targets are value-dependent and that technical choices
+                                such as thresholds and missing-data handling can embed judgements.
+                                In future projects, I will make evaluation criteria explicit,
+                                justify my research agent’s 0.6 relevance threshold and consider
+                                whose values those choices reflect.
                             </p>
 
                         </div>

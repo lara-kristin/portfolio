@@ -53,8 +53,7 @@
             <h1>Final Project Evaluation</h1>
 
             <p>
-                Evidence and reflection from the design and implementation of an
-                agent-based academic research system.
+                Evidence and evaluation from the design phase and implemented solution.
             </p>
 
         </div>
@@ -66,32 +65,71 @@
 
         <div class="content-wrapper">
 
-            <!-- Evaluation Scope -->
+            <!-- Design Phase -->
             <section class="content-section">
 
-                <h2>Evaluation Scope</h2>
+                <h2>Design Phase: Contribution and Evaluation</h2>
 
                 <p>
-                    These reflections provide a focused evaluation of the project’s design
-                    and implementation stages. They are not intended to be comprehensive;
-                    further examples and deeper analysis are developed in the
-                    <a href="reflective-case-studies.html">three reflective case studies</a>
-                    and the
-                    <a href="module-reflection.html">final module reflection</a>.
+                    I developed the initial design proposal, which the team reviewed and
+                    agreed on collaboratively. I wrote Section 4,
+                    <em>Design Decisions and Technical Rationale</em>, and created Diagram 2,
+                    the UML Sequence Diagram, and Diagram 3, the UML Activity Diagram. I also
+                    reviewed my peers’ contributions, provided feedback and integrated the
+                    agreed sections into the final report, standardising formatting and
+                    references to ensure consistency. We coordinated through WhatsApp and
+                    used a shared Google Drive folder to exchange and revise project files.
+                </p>
+
+                <p>
+                    The design separated planning, retrieval and evaluation into specialised
+                    agents coordinated by a deterministic orchestrator, with human review
+                    points bounding autonomy. Responsibilities were clear and the workflow
+                    traceable. However, routing interactions through the orchestrator
+                    constrained the social ability associated with intelligent agents
+                    (Wooldridge and Jennings, 1995). This was deliberate: rather than
+                    introduce richer agent communication through mechanisms such as KQML,
+                    we prioritised deterministic, auditable exchanges because architectures
+                    without centralised verification can amplify errors across agent handoffs
+                    (Kim <em>et al.</em>, 2026). The trade-off improved traceability and
+                    error containment but reduced agent-to-agent autonomy. More fundamentally,
+                    none of these safeguards had yet been implemented, so bounded autonomy,
+                    reliable oversight and error containment remained design claims rather
+                    than demonstrated properties.
+                </p>
+
+                <h3>References</h3>
+
+                <p class="reference-entry">
+                    Kim, Y. <em>et al.</em> (2026) ‘Capable language models can outgrow
+                    the benefits of collaboration’, <em>Nature Machine Intelligence</em>,
+                    8, pp. 1157-1172. Available at:
+                    <a
+                        href="https://doi.org/10.1038/s42256-026-01268-y"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1038/s42256-026-01268-y
+                    </a>
+                </p>
+
+                <p class="reference-entry">
+                    Wooldridge, M. and Jennings, N. R. (1995) ‘Intelligent agents:
+                    theory and practice’, <em>The Knowledge Engineering Review</em>,
+                    10(2), pp. 115-152. Available at:
+                    <a
+                        href="https://doi.org/10.1017/S0269888900008122"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        https://doi.org/10.1017/S0269888900008122
+                    </a>
                 </p>
 
             </section>
 
-            <!-- Submitted Design Report -->
+            <!-- Submitted Design Report & Tutor Feedback -->
             <section class="content-section">
 
-                <h2>Submitted Design Report</h2>
-
-                <p>
-                    The group design proposed three specialised agents coordinated by a
-                    deterministic orchestrator, with human review used to bound autonomous
-                    behaviour.
-                </p>
+                <h2>Submitted Design Report &amp; Tutor Feedback</h2>
 
                 <p>
                     <a
@@ -102,13 +140,6 @@
                         Open Submitted Design Report →
                     </a>
                 </p>
-
-            </section>
-
-            <!-- Tutor Feedback -->
-            <section class="content-section">
-
-                <h2>Tutor Feedback</h2>
 
                 <figure class="evidence-figure">
 
@@ -130,103 +161,38 @@
 
             </section>
 
-            <!-- Design Phase Reflection -->
-            <section class="content-section">
-
-                <h2>Design Phase Reflection</h2>
-
-                <p class="post-subheading">
-                    <strong>WHAT</strong>
-                </p>
-
-                <p>
-                    During the group design phase, I wrote the design decisions section and
-                    produced the sequence and activity diagrams. While reviewing a teammate’s
-                    class diagram, I noticed that human-review functions sat on the
-                    Orchestrator, but the researcher was absent from the static model despite
-                    appearing in the dynamic workflow.
-                </p>
-
-                <p class="post-subheading">
-                    <strong>SO WHAT</strong>
-                </p>
-
-                <p>
-                    This exposed a weakness in the design itself: human oversight was central
-                    to our architecture, yet it was not represented consistently across views.
-                    Adding a boundary class improved that consistency, but the design was still
-                    unimplemented, so claims about bounded autonomy and reliable oversight
-                    remained assumptions rather than demonstrated behaviour.
-                </p>
-
-                <p class="post-subheading">
-                    <strong>NOW WHAT</strong>
-                </p>
-
-                <p>
-                    In future, I will treat cross-diagram consistency as a design criterion and
-                    distinguish clearly between controls that are proposed and controls that
-                    have been tested.
-                </p>
-
-            </section>
-
-            <!-- Design Revision Evidence -->
-            <section class="content-section">
-
-                <h2>Design Revision Evidence</h2>
-
-                <h3>Original Class Diagram and Feedback</h3>
-
-                <figure class="evidence-figure">
-
-                    <a
-                        class="evidence-link"
-                        href="../images/final-project-evaluation/diagram 1 feedback (before).png"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        <img
-                            class="evidence-image"
-                            src="../images/final-project-evaluation/diagram 1 feedback (before).png"
-                            alt="Feedback identifying the missing researcher boundary in the original UML class diagram"
-                            loading="lazy">
-
-                    </a>
-
-                </figure>
-
-                <h3>Revised Class Diagram</h3>
-
-                <figure class="evidence-figure">
-
-                    <a
-                        class="evidence-link"
-                        href="../images/final-project-evaluation/diagram 1 after.png"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        <img
-                            class="evidence-image"
-                            src="../images/final-project-evaluation/diagram 1 after.png"
-                            alt="Revised UML class diagram including the researcher boundary"
-                            loading="lazy">
-
-                    </a>
-
-                </figure>
-
-            </section>
-
             <!-- Implemented Solution -->
             <section class="content-section">
 
                 <h2>Implemented Solution</h2>
 
                 <p>
-                    The group design was subsequently developed into an individual working
-                    implementation. The repository contains the source code, documentation,
-                    tests and implementation history.
+                    The group design was developed into a working implementation covering
+                    the full workflow from research question to a saved brief containing
+                    summaries, themes, gaps and limitations, with two human checkpoints
+                    and 93 offline tests.
+                </p>
+
+                <p>
+                    The implementation follows the proposed architecture: three agents,
+                    a deterministic orchestrator, and model use confined to semantic
+                    judgement. Every retrieved DOI is checked against Crossref, and each
+                    brief records the limitations that applied to its own run.
+                </p>
+
+                <p>
+                    The main remaining limitations concern scope and evaluation. The system
+                    uses one literature source and abstracts rather than full texts, and
+                    there is no labelled dataset against which retrieval quality can be
+                    measured. It also does not independently verify whether a generated
+                    summary is faithful to the abstract from which it was produced.
+                </p>
+
+                <p>
+                    Testing further showed that apparently correct output is weak evidence
+                    that individual safeguards are functioning as intended, a point I examine
+                    further in the
+                    <a href="final-reflective-piece.html">Final Reflective Piece</a>.
                 </p>
 
                 <p>
@@ -237,151 +203,6 @@
                         rel="noopener noreferrer">
                         View Implemented Research Agent on GitHub →
                     </a>
-                </p>
-
-            </section>
-
-            <!-- Implemented Solution Reflection -->
-            <section class="content-section">
-
-                <h2>Implemented Solution Reflection</h2>
-
-                <p class="post-subheading">
-                    <strong>WHAT</strong>
-                </p>
-
-                <p>
-                    During implementation, review and testing exposed several controls and
-                    recorded states that were not operating as intended. In some cases the
-                    system still behaved correctly because the surrounding workflow happened
-                    to prevent the failure; in others, the run completed without making the
-                    underlying problem obvious.
-                </p>
-
-                <div class="pdp-table-wrapper">
-
-                    <table class="pdp-table">
-
-                        <thead>
-                            <tr>
-                                <th>Control</th>
-                                <th>Intended behaviour</th>
-                                <th>What actually happened</th>
-                                <th>Why it was easy to miss</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>
-                                    <strong>Approval gate</strong>
-                                </td>
-
-                                <td>
-                                    Retrieval should only proceed for researcher-approved
-                                    sub-questions.
-                                </td>
-
-                                <td>
-                                    Approval was recorded, but retrieval initially did not
-                                    check it.
-                                </td>
-
-                                <td>
-                                    The workflow normally called retrieval only after approval,
-                                    so behaviour still appeared correct.
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Retry limit</strong>
-                                </td>
-
-                                <td>
-                                    <code>retried_once</code> should prevent another
-                                    reformulation.
-                                </td>
-
-                                <td>
-                                    The updated flag was written to a copy that did not reach
-                                    the caller.
-                                </td>
-
-                                <td>
-                                    Each sub-question was visited once per pass, so another
-                                    retry was not normally attempted.
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Retry and backoff</strong>
-                                </td>
-
-                                <td>
-                                    Failed requests should be retried with exponential backoff.
-                                </td>
-
-                                <td>
-                                    The decorator was attached to the wrong object, so requests
-                                    were not retried.
-                                </td>
-
-                                <td>
-                                    The code compiled and the full test suite still passed.
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Query record</strong>
-                                </td>
-
-                                <td>
-                                    If a reformulated query is worse, retain both the original
-                                    papers and original query.
-                                </td>
-
-                                <td>
-                                    The original papers were kept, but the reformulated query
-                                    could still be recorded.
-                                </td>
-
-                                <td>
-                                    The run completed normally; only the link between query and
-                                    evidence was wrong.
-                                </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-                <p class="post-subheading">
-                    <strong>SO WHAT</strong>
-                </p>
-
-                <p>
-                    I learned that correct behaviour can occur for the wrong reason, and that
-                    a successful run does not prove its safeguards or records are trustworthy.
-                    None of these issues was exposed by an obvious failing test. They emerged
-                    through code review, inspecting logs and outputs, or when I tried to use
-                    the recorded retry state in the brief’s limitations.
-                </p>
-
-                <p class="post-subheading">
-                    <strong>NOW WHAT</strong>
-                </p>
-
-                <p>
-                    I now test mechanisms directly: that a forbidden action does not occur,
-                    that a limit fires when reached, and that recorded state matches the
-                    evidence it describes. Testing outputs alone would have missed several
-                    of the failures above.
                 </p>
 
             </section>
