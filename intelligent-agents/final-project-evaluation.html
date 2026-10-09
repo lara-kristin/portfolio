@@ -145,18 +145,19 @@
                     The group design was developed into a working implementation: three
                     agents using Gemini 3.5 Flash-Lite for semantic judgement, coordinated
                     by a deterministic orchestrator with two human checkpoints. It retrieves
-                    from Semantic Scholar, verifies DOIs against Crossref, and produces a
-                    brief containing selected papers with their relevance scores, summaries,
-                    themes, gaps and the limitations of that search. The full workflow from
-                    research question to saved brief is covered by an offline test suite.
+                    from Semantic Scholar, verifies DOIs against Crossref and produces a
+                    saved brief containing selected papers with relevance scores, summaries,
+                    themes, gaps and limitations. The workflow is covered by an offline
+                    test suite.
                 </p>
 
                 <p>
                     The main limitations concern scope and evaluation: the system relies on
-                    a single literature source and on abstracts rather than full texts, has
-                    no labelled dataset for measuring retrieval quality, and does not
-                    independently verify summary faithfulness. A more detailed critical
-                    evaluation is provided in the
+                    one literature source and abstracts rather than full texts, has no
+                    labelled dataset for measuring retrieval quality, and does not
+                    independently verify summary faithfulness. Testing also showed that
+                    apparently correct outputs could mask safeguards that were not functioning
+                    as intended. A more detailed critical evaluation is provided in the
                     <a href="final-reflective-piece.html">Final Reflective Piece</a>.
                 </p>
 
