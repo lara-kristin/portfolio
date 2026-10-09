@@ -68,7 +68,7 @@
             <!-- Design Phase -->
             <section class="content-section">
 
-                <h2>Design Phase: Contribution and Evaluation</h2>
+                <h2>Design Phase</h2>
 
                 <p>
                     I developed the initial design proposal, which the team reviewed and
@@ -96,6 +96,16 @@
                     none of these safeguards had yet been implemented, so bounded autonomy,
                     reliable oversight and error containment remained design claims rather
                     than demonstrated properties.
+                </p>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="../documents/Project%20Report_Group%20D.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Submitted Design Report →
+                    </a>
                 </p>
 
                 <h3>References</h3>
@@ -126,72 +136,27 @@
 
             </section>
 
-            <!-- Submitted Design Report & Tutor Feedback -->
-            <section class="content-section">
-
-                <h2>Submitted Design Report &amp; Tutor Feedback</h2>
-
-                <p>
-                    <a
-                        class="download-link"
-                        href="../documents/Project%20Report_Group%20D.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Open Submitted Design Report →
-                    </a>
-                </p>
-
-                <figure class="evidence-figure">
-
-                    <a
-                        class="evidence-link"
-                        href="../images/final-project-evaluation/tutor feedback.png"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        <img
-                            class="evidence-image"
-                            src="../images/final-project-evaluation/tutor feedback.png"
-                            alt="Tutor feedback on the submitted project report"
-                            loading="lazy">
-
-                    </a>
-
-                </figure>
-
-            </section>
-
             <!-- Implemented Solution -->
             <section class="content-section">
 
                 <h2>Implemented Solution</h2>
 
                 <p>
-                    The group design was developed into a working implementation covering
-                    the full workflow from research question to a saved brief containing
-                    summaries, themes, gaps and limitations, with two human checkpoints
-                    and 93 offline tests.
+                    The group design was developed into a working implementation: three
+                    agents using Gemini 3.5 Flash-Lite for semantic judgement, coordinated
+                    by a deterministic orchestrator with two human checkpoints. It retrieves
+                    from Semantic Scholar, verifies DOIs against Crossref, and produces a
+                    brief containing selected papers with their relevance scores, summaries,
+                    themes, gaps and the limitations of that search. The full workflow from
+                    research question to saved brief is covered by an offline test suite.
                 </p>
 
                 <p>
-                    The implementation follows the proposed architecture: three agents,
-                    a deterministic orchestrator, and model use confined to semantic
-                    judgement. Every retrieved DOI is checked against Crossref, and each
-                    brief records the limitations that applied to its own run.
-                </p>
-
-                <p>
-                    The main remaining limitations concern scope and evaluation. The system
-                    uses one literature source and abstracts rather than full texts, and
-                    there is no labelled dataset against which retrieval quality can be
-                    measured. It also does not independently verify whether a generated
-                    summary is faithful to the abstract from which it was produced.
-                </p>
-
-                <p>
-                    Testing further showed that apparently correct output is weak evidence
-                    that individual safeguards are functioning as intended, a point I examine
-                    further in the
+                    The main limitations concern scope and evaluation: the system relies on
+                    a single literature source and on abstracts rather than full texts, has
+                    no labelled dataset for measuring retrieval quality, and does not
+                    independently verify summary faithfulness. A more detailed critical
+                    evaluation is provided in the
                     <a href="final-reflective-piece.html">Final Reflective Piece</a>.
                 </p>
 
