@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Exploratory Data Analysis | Lara Koller</title>
+
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <nav class="navigation" aria-label="Main navigation">
+
+            <a class="site-name" href="../index.html">
+                Lara's E-Portfolio
+            </a>
+
+            <ul class="navigation-links">
+
+                <li>
+                    <a href="../about.html">
+                        About Me
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../intelligent-agents.html">
+                        Intelligent Agents
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../machine-learning.html" aria-current="page">
+                        Machine Learning
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <p class="hero-label">
+                Machine Learning
+            </p>
+
+            <h1>Exploratory Data Analysis</h1>
+
+            <p>
+                Exploratory analysis of the Auto MPG dataset using Python and Jupyter Notebook.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="content-wrapper">
+
+            <!-- Activity Overview -->
+            <section class="content-section">
+
+                <h2>Activity Overview</h2>
+
+                <p>
+                    This activity applied exploratory data analysis techniques to the Auto MPG
+                    dataset. The analysis examined missing values, skewness and kurtosis,
+                    correlations between numerical variables, relationships through scatter
+                    plots, and the preparation of categorical data for numerical analysis.
+                </p>
+
+            </section>
+
+            <!-- Analysis and Findings -->
+            <section class="content-section">
+
+                <h2>Analysis and Findings</h2>
+
+                <p>
+                    Initial inspection showed 398 observations and nine variables. Although
+                    all columns initially appeared complete, the horsepower column contained
+                    six question-mark placeholders rather than numerical values. After
+                    converting horsepower to a numerical variable, these values were
+                    recognised as missing and the six affected rows were removed, leaving
+                    392 observations.
+                </p>
+
+                <p>
+                    Horsepower showed the strongest positive skewness at approximately 1.09,
+                    indicating a relatively small number of high-horsepower cars. The
+                    correlation analysis showed that fuel economy was strongly negatively
+                    associated with weight (-0.83), displacement (-0.81), cylinders (-0.78)
+                    and horsepower (-0.78). The scatter plots supported these relationships
+                    and also showed that newer cars in the dataset generally achieved higher
+                    miles per gallon.
+                </p>
+
+                <p>
+                    The analysis also highlighted the importance of treating categorical
+                    variables carefully. The numerical origin codes represented categories
+                    rather than quantities, meaning correlations involving those codes were
+                    not inherently meaningful. Car names were also unsuitable for direct
+                    numerical conversion because 301 different names occurred across 392
+                    observations. I therefore extracted vehicle brands, identified spelling
+                    variations and abbreviations, reduced 37 initial brand labels to 30
+                    cleaned categories, and created a separate numerical brand code while
+                    retaining the original label.
+                </p>
+
+            </section>
+
+            <!-- Reflection -->
+            <section class="content-section">
+
+                <h2>Reflection</h2>
+
+                <p>
+                    This exercise showed me that exploratory data analysis involves more than
+                    producing descriptive statistics and visualisations. A column can appear
+                    complete while still containing values that represent missing data, and
+                    numerical values do not necessarily represent quantities that should be
+                    analysed mathematically. I also saw how apparently simple categorical
+                    encoding requires prior data cleaning to avoid treating spelling
+                    variations as separate categories. These checks are important before
+                    applying machine learning methods because problems identified during EDA
+                    can directly affect how later models interpret the data.
+                </p>
+
+            </section>
+
+            <!-- Evidence -->
+            <section class="content-section">
+
+                <h2>Evidence</h2>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="https://github.com/lara-kristin/portfolio/blob/custom-portfolio/machine-learning/notebooks/Unit_2_Exploratory_Data_Analysis.ipynb"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Completed Jupyter Notebook →
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="data/Unit_2_auto_mpg.csv"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Auto MPG Dataset →
+                    </a>
+                </p>
+
+            </section>
+
+            <!-- Back Link -->
+            <p>
+                <a class="back-link" href="../machine-learning.html">
+                    ← Back to Machine Learning
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <p>© 2026 Lara Koller</p>
+
+            <p>MSc Artificial Intelligence · University of Essex</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
