@@ -10,9 +10,17 @@ https://lara-kristin.github.io/portfolio/
 
 - About Me
 - Intelligent Agents
-- Future modules (coming soon)
-  - Machine Learning
+  - Collaborative Discussions
+  - Creating Agent Dialogues
+  - Creating Parse Trees
+  - Deep Learning in Action
+  - Final Project Evaluation
+  - Reflective Case Studies
+- Machine Learning
+  - Exploratory Data Analysis
+  - Collaborative Discussions
+- Future modules
   - Research Methods & Professional Practice
   - MSc Dissertation
 
-The portfolio documents coursework, practical activities, project work and reflective learning completed throughout the programme.
+The portfolio documents coursework, practical activities, project work, technical evidence and reflective learning completed throughout the programme.
