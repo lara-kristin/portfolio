@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Correlation and Regression | Lara Koller</title>
+
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+
+        <nav class="navigation" aria-label="Main navigation">
+
+            <a class="site-name" href="../index.html">
+                Lara's E-Portfolio
+            </a>
+
+            <ul class="navigation-links">
+
+                <li>
+                    <a href="../about.html">
+                        About Me
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../intelligent-agents.html">
+                        Intelligent Agents
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../machine-learning.html" aria-current="page">
+                        Machine Learning
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <p class="hero-label">
+                Machine Learning
+            </p>
+
+            <h1>Correlation and Regression</h1>
+
+            <p>
+                Exploring the relationship between population and GDP per capita
+                using correlation analysis and linear regression.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="content-wrapper">
+
+            <!-- Activity Overview -->
+            <section class="content-section">
+
+                <h2>Activity Overview</h2>
+
+                <p>
+                    This seminar activity investigated whether population size is related
+                    to GDP per capita. Population and GDP datasets were cleaned, matched by
+                    country and combined before calculating mean population and mean GDP
+                    per capita. Pearson correlation was then used to examine the strength
+                    of the linear relationship, followed by a simple linear regression
+                    model using population as the predictor.
+                </p>
+
+            </section>
+
+            <!-- Analysis and Findings -->
+            <section class="content-section">
+
+                <h2>Analysis and Findings</h2>
+
+                <p>
+                    Preparing the data required more than simply joining the two datasets.
+                    The GDP file extended only to 2020 while the population file extended
+                    to 2021, and both datasets contained entries representing regions and
+                    other country groups rather than individual countries. A total of 49
+                    such aggregate entries were removed. Countries with insufficient
+                    observations were then excluded using a minimum requirement of ten
+                    years of GDP-per-capita data. This removed nine countries and
+                    territories and resulted in a final dataset of 208.
+                </p>
+
+                <p>
+                    The analysis found practically no linear relationship between mean
+                    population and mean GDP per capita. Pearson's correlation coefficient
+                    was -0.067 with a p-value of 0.336, meaning the observed correlation
+                    was very weak and not statistically significant. The scatter plot also
+                    showed substantial variation in GDP per capita among countries with
+                    similar population sizes.
+                </p>
+
+                <p>
+                    The linear regression model confirmed this result. Population explained
+                    only 0.3% of the variation in GDP per capita in the training data
+                    (R² = 0.003). Test performance was slightly worse than predicting the
+                    average value, with an R² of -0.016 and a mean absolute error of
+                    approximately $18,200. Population alone was therefore not a useful
+                    predictor of GDP per capita in this dataset.
+                </p>
+
+            </section>
+
+            <!-- Reflection -->
+            <section class="content-section">
+
+                <h2>Reflection</h2>
+
+                <p>
+                    This activity reinforced that a statistically appropriate workflow
+                    begins with understanding and preparing the data rather than immediately
+                    fitting a model. Decisions such as removing aggregate entries, defining
+                    a minimum amount of available data and handling different time ranges
+                    affected which countries were represented in the final analysis.
+                </p>
+
+                <p>
+                    The exercise also highlighted an ethical aspect of data preparation.
+                    The rule requiring at least ten years of GDP-per-capita data was applied
+                    consistently, but it did not affect all countries equally. Several
+                    countries with limited data, including Somalia, South Sudan and North
+                    Korea, were excluded, meaning that some poorer countries became
+                    underrepresented in the final dataset. This showed me that even
+                    technically reasonable cleaning decisions can introduce selection or
+                    representation bias and influence whose circumstances are reflected in
+                    an analysis.
+                </p>
+
+                <p>
+                    I also learned that fitting a regression model does not mean that the
+                    predictor is useful. The near-zero correlation and poor R² values showed
+                    clearly that population alone provides almost no explanatory power for
+                    GDP per capita. The exercise therefore highlighted the importance of
+                    evaluating data quality, representation, statistical relationships and
+                    model performance before drawing conclusions.
+                </p>
+
+            </section>
+
+            <!-- Limitations -->
+            <section class="content-section">
+
+                <h2>Limitations</h2>
+
+                <p>
+                    The GDP data ended in 2020 while population data extended to 2021, so
+                    the averaging periods were not identical. The missing-data rule also
+                    excluded nine countries and territories, including some relatively poor
+                    countries, meaning that missing data was not random and the final sample
+                    may slightly underrepresent poorer countries. In addition, Pearson
+                    correlation and simple linear regression capture only linear
+                    relationships and can be affected by extreme observations such as very
+                    large countries and small high-income states.
+                </p>
+
+            </section>
+
+            <!-- Evidence -->
+            <section class="content-section">
+
+                <h2>Evidence</h2>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="https://github.com/lara-kristin/portfolio/blob/custom-portfolio/machine-learning/notebooks/Unit_4_Seminar_Population_GDP.ipynb"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Completed Jupyter Notebook →
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="data/Unit_4_Global_GDP.csv"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Global GDP Dataset →
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        class="download-link"
+                        href="data/Unit_4_Global_Population.csv"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open Global Population Dataset →
+                    </a>
+                </p>
+
+            </section>
+
+            <!-- Back Link -->
+            <p>
+                <a class="back-link" href="../machine-learning.html">
+                    ← Back to Machine Learning
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <p>© 2026 Lara Koller</p>
+
+            <p>MSc Artificial Intelligence · University of Essex</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
